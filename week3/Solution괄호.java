@@ -6,11 +6,7 @@ class Solution괄호 {
     public int solution(String s) {
         String sb = s + s;
         int answer = 0;
-        //✅ 문자열의 길이만큼 반복
         for (int i = 0; i < s.length(); i++) {
-            //✅ 문자열을 회전시킨다.
-            //✅ 문자열이 유효한지 확인
-            //✅ 유효하다면 answer를 1 증가시킨다.
             if (isValid(sb.substring(i, s.length() + i))) answer++;
         }
         return answer;
